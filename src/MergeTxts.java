@@ -18,7 +18,6 @@ public class MergeTxts {
 				System.out.println("Absolute path:" + textFiles[i].getAbsolutePath());
 				System.out.println("File name:" + textFiles[i].getName());
 				FileReaderAll(textFiles[i].getCanonicalPath(), "GBK", sFilePath + sOutPutFileName);
-				// System.out.println("内容"+content);
 				System.out.println("Length for current file:" + textFiles[i].length());
 				System.out.println("Lines in total:" + index);
 				System.out.println("------------------------------------------");
@@ -34,20 +33,16 @@ public class MergeTxts {
 		BufferedWriter bwOutPut = new BufferedWriter(new FileWriter(fOutPut, true));
 		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(FileName), charset));
 		String str = reader.readLine();
-		// while ((reader.readLine()) != null) //a line end with a symbol like
-		// "\n"
 		while (str != null) // a line ends with a symbol like "\n"
 		{
-			// temp +=reader.readLine();
-			// temp +=reader.readLine()+"\n";
 			try {
-				bwOutPut.write(str.split("	")[1]);
+				bwOutPut.write(str);
+				//bwOutPut.write(str.split("	")[1]);
 				bwOutPut.newLine();
+				index++;
 			} catch (Exception e) {
 				System.out.println("Exception:"+str);
 			}
-			// System.out.println(str.split(" ")[1]);
-			index++;
 			str = reader.readLine();
 		}
 		reader.close();
