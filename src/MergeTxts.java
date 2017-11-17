@@ -26,7 +26,6 @@ public class MergeTxts {
 		}
 		System.out.println(textFiles.length + "Files are merged");
 	}
-
 	public static void FileReaderAll(String FileName, String charset, String outPutFileName) throws IOException {
 		File fOutPut = new File(outPutFileName);
 		if (fOutPut.exists() == false) {
