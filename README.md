@@ -9,7 +9,7 @@ String sFilePath = "C:\\w71";
 String sOutPutFileName = "\\systems.txt";
 ```
   
-  运行时将会把在C:/w71这个文件0夹里的所有txt文件里的内容拷贝到C:/w71/systems.txt文件中去。
+  运行时将会把在C:/w71这个文件夹里的所有txt文件里的内容拷贝到C:/w71/systems.txt文件中去。
 
 ## Hints： 
   1.不用事先新建C:/w71/systems.txt
