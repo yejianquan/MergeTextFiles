@@ -377,7 +377,7 @@ public class MergeTxts {
         String user = "root"; 
 
         // MySQL配置时的密码
-        String password = "Zzz123.,";
+        String password = "admin";
 
         try { 
          // 加载驱动程序
